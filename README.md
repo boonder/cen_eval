@@ -14,7 +14,7 @@ To run execute:
 The sciprt Will generate two files in the output folder specificed in [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml) (default is same as the input folder ```data-dump```):
 
 1. ```event_stats_per_device.csv```
-This files containts the min, max, and mean of the counts over the interval specified in [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml). hour and day are the available options. default is hour.
+This files containts the min, max, and mean of the counts over the interval specified in [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml). hour and day are the available options. default is hour. The requirements as stated asked for a daily summary however since all of the sample data provided was for a single day, the min, max and mean values returned would have all been the same value, hence the hourly option was set as default.
 
 2. ```squirrel_histogram.csv``` 
 This files contains "histogram" data for the count of squirrel events over specified interval in [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml). default is 10 seconds. Histogram may not be the best way to investigate bursts in squirrel events if the frequency and intesity of the bursts are not known beforehand as it will flatten the data in the provided bins.
