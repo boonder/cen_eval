@@ -1,0 +1,12 @@
+# stats_interval determines whether to use 'day' or 'hour' for the basis of comparison 
+# when calculating min, max and avg of counts of event types per device_id
+stats_interval: 'hour'
+
+# histogram_bin_size determines the interval size for the histogram output (in seconds) 
+histogram_bin_size: 10
+
+# source_path: where to read files from
+source_path: 'data-dump/'
+
+# destination path: where to write the ouputs to
+destination_path: 'data-dump/'
