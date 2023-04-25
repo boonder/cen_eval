@@ -4,7 +4,7 @@ script to generate event data stats.
 ## Installation and Usage:
 Modify the conf.yaml file to set the appropriate source folder. Default is a subdirectory named ```data-dump```
 
-Verify ```dependencies.txt```. if using pip execute:
+Verify dependencies listed in [requirements.txt](https://github.com/boonder/cen_eval/blob/main/requirements.txt). if using pip execute:
 ```pip install -r requirements.txt```
 
 To run execute:
