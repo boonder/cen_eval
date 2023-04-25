@@ -11,7 +11,7 @@ To run execute:
 ```python3 dce_stats.py```
 
 ## Output:
-The sciprt Will generate two files in the output folder specificed in [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml) (default is same as the input folder ```data-dump```):
+The sciprt will generate two files in the output folder specificed in [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml) (default is same as the input folder ```data-dump```):
 
 1. ```event_stats_per_device.csv```
 This files containts the min, max, and mean of the counts over the interval specified in [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml). hour and day are the available options. default is hour. The requirements as stated asked for a daily summary however since all of the sample data provided was for a single day, the min, max and mean values returned would have all been the same value, hence the hourly option was set as default.
