@@ -2,7 +2,7 @@
 script to generate event data stats.
 
 ## Installation and Usage:
-Modify the [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml) file to set the appropriate source folder, if needed. The default input folder is expected to be a subdirectory named ```data-dump```
+Modify the [config.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml) file to set the appropriate source folder, if needed. The default input folder is expected to be a subdirectory named ```data-dump```
 
 Verify dependencies listed in [requirements.txt](https://github.com/boonder/cen_eval/blob/main/requirements.txt). if using pip execute:
 ```pip install -r requirements.txt```
@@ -11,13 +11,13 @@ To run, execute:
 ```python3 dce_stats.py```
 
 ## Output:
-The script will generate two files in the output folder specificed in [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml) (default is same as the input folder ```data-dump```):
+The script will generate two files in the output folder specificed in [config.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml) (default is same as the input folder ```data-dump```):
 
 1. ```event_stats_per_device.csv```
-This files containts the min, max, and mean of the counts over the interval specified in [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml). hour and day are the available options. default is hour. The requirements as stated asked for a daily summary however since all of the sample data provided was for a single day, the min, max and mean values returned would have all been the same value, hence the hourly option was set as default.
+This files containts the min, max, and mean of the counts over the interval specified in [config.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml). hour and day are the available options. default is hour. The requirements as stated asked for a daily summary however since all of the sample data provided was for a single day, the min, max and mean values returned would have all been the same value, hence the hourly option was set as default.
 
 2. ```squirrel_histogram.csv``` 
-This files contains "histogram" data for the count of squirrel events over specified interval in [conf.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml). default is 10 seconds. Histogram may not be the best way to investigate bursts in squirrel events if the frequency and intesity of the bursts are not known beforehand as it will flatten the data in the provided bins.
+This files contains "histogram" data for the count of squirrel events over specified interval in [config.yaml](https://github.com/boonder/cen_eval/blob/main/config.yaml). default is 10 seconds. Histogram may not be the best way to investigate bursts in squirrel events if the frequency and intesity of the bursts are not known beforehand as it will flatten the data in the provided bins.
 
 ## Assumptions:
 1. The current implementation loads the entire batch into memory so it is assumed that a given data dump will fit in memory. A linear or partitioning approach would be recommended if larger data dumps are expected.
